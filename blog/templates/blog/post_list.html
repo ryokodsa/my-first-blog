@@ -1,3 +1,5 @@
+<!--メインの投稿表示ページ-->
+
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -7,7 +9,7 @@
                     <p>{{ post.published_date }}</p>
                 </div>
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <h3>{{ post.place }}</h3>
             </div>
         {% endfor %}
 {% endblock %}
